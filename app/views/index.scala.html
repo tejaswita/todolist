@@ -1,0 +1,30 @@
+@(users: List[User])
+
+@main("TODO List") {
+	<div class="container">
+	    <h1>Tasks: @users.length </h1>
+	    <a href="@routes.UsersController.add" class="btn btn-primary">Add User</a>
+	    <table class="table table-striped">
+		    <thead>
+		    	<tr>
+		    		<th>Task Number/th>
+					<th>Task Name</th>
+					<th>Edit</th>
+					<th>Delete</th>
+		    	</tr>
+		    </thead>
+			<tbody>
+				@for(user <- users) {
+				<tr>
+					<td>@user.id</td>
+					<td>@user.name</td>
+						@user.id.map { id =>
+							<td><a href="@routes.UsersController.edit(id)" class="btn btn-warning" type="submit">Edit</button></td>
+							<td>@helper.form(routes.UsersController.delete(id)){<button class="btn btn-danger" type="submit">Delete</button>}</li></td>
+						}
+				</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+}
