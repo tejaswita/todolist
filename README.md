@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # play-heroku-seed README
 You can try a deployed instance of the app here: https://afternoon-wildwood-5782.herokuapp.com/
 
@@ -87,3 +88,6 @@ If you modify the application name in the Procfile, make sure you update the app
 ### Requests for contribution
 - Documentation and tips for readme
 - Model improvements/refinement
+=======
+# todolist
+>>>>>>> d84c00155744125c35d48ebae0d4d177f3fb74a3
